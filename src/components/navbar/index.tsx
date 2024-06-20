@@ -1,4 +1,4 @@
-import { Burger, Header, Navbar as Nav, Text, useMantineTheme } from "@mantine/core"
+import { Burger, Button, Header, Navbar as Nav, Text, useMantineTheme } from "@mantine/core"
 import Brand from "./Brand"
 import MainLinks from "./mainLinks"
 
@@ -17,15 +17,15 @@ export const Navbar = ({ opened, setOpened }: INavbar) => {
   return (
     <Header height={{ base: 50, md: 70 }} p="md">
       <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-          <Burger
-            opened={opened}
-            onClick={setOpened}
-            size="sm"
-            color={theme.colors.gray[6]}
-            mr="xl"
-          />
+        <Burger
+          opened={opened}
+          onClick={setOpened}
+          size="md"
+          color={theme.colors.gray[6]}
+          mr="xl"
+        />
 
-        <Text fw={700} mt={2.8}>
+        <Text fw={700} size="lg" mt={2.8}>
           Sistema Administrativo
         </Text>
       </div>
@@ -41,6 +41,11 @@ export const Sidebar = ({ opened }: ISidebar) => {
       </Nav.Section>
       <Nav.Section grow mt="md">
         <MainLinks />
+      </Nav.Section>
+      <Nav.Section>
+        <Button fullWidth variant="subtle" color="red">
+          Cerrar Sesión
+        </Button>
       </Nav.Section>
     </Nav>
   )

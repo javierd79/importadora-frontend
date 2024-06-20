@@ -1,12 +1,8 @@
 import React from 'react';
 import {
-  IconGitPullRequest,
-  IconAlertCircle,
   IconMessages,
-  IconDatabase,
   IconHome,
   IconBox,
-  IconTruckDelivery,
   IconBuilding,
 } from '@tabler/icons-react';
 import { ThemeIcon, UnstyledButton, Group, Text } from '@mantine/core';
@@ -34,11 +30,11 @@ function MainLink({ icon, color, label }: MainLinkProps) {
       })}
     >
       <Group>
-        <ThemeIcon color={color} variant="light">
+        <ThemeIcon size="lg" color={color} variant="light">
           {icon}
         </ThemeIcon>
 
-        <Text size="sm">{label}</Text>
+        <Text size="lg">{label}</Text>
       </Group>
     </UnstyledButton>
   );
